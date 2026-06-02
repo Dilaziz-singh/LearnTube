@@ -1,0 +1,232 @@
+/* LearnTube - Focus Mode Styles */
+
+html.learntube-active,
+html.learntube-active body,
+html.learntube-active ytd-app,
+html.learntube-active #content,
+html.learntube-active #page-manager {
+  background: #000 !important;
+}
+
+html.learntube-active body {
+  overflow: hidden !important;
+}
+
+/* Smooth transition for all hideable elements */
+html.learntube-active ytd-masthead,
+html.learntube-active #masthead-container,
+html.learntube-active #guide,
+html.learntube-active ytd-guide-renderer,
+html.learntube-active ytd-mini-guide-renderer,
+html.learntube-active ytd-app tp-yt-app-drawer,
+html.learntube-active #guide-button,
+html.learntube-active ytd-rich-grid-renderer,
+html.learntube-active ytd-browse[page-subtype="home"] #contents,
+html.learntube-active ytd-rich-shelf-renderer[is-shorts],
+html.learntube-active ytd-reel-shelf-renderer,
+html.learntube-active ytd-rich-shelf-renderer,
+html.learntube-active #below,
+html.learntube-active ytd-watch-metadata,
+html.learntube-active #actions,
+html.learntube-active #top-row,
+html.learntube-active #description,
+html.learntube-active ytd-structured-description-content-renderer,
+html.learntube-active #comments,
+html.learntube-active ytd-comments,
+html.learntube-active ytd-watch-next-secondary-results-renderer,
+html.learntube-active #secondary,
+html.learntube-active #secondary-inner,
+html.learntube-active .ytp-ce-element,
+html.learntube-active .ytp-endscreen-content,
+html.learntube-active ytd-compact-autoplay-renderer,
+html.learntube-active ytd-merch-shelf-renderer,
+html.learntube-active #related,
+html.learntube-active ytd-live-chat-frame,
+html.learntube-active ytd-playlist-panel-renderer,
+html.learntube-active ytd-engagement-panel-section-list-renderer,
+html.learntube-active ytd-feed-filter-chip-bar-renderer,
+html.learntube-active ytd-video-primary-info-renderer,
+html.learntube-active ytd-video-secondary-info-renderer {
+  display: none !important;
+}
+
+/* Extra Strict removes the obvious exits while a lesson is active. */
+html.learntube-extra-strict ytd-masthead #start,
+html.learntube-extra-strict ytd-masthead #center,
+html.learntube-extra-strict ytd-masthead #end,
+html.learntube-extra-strict ytd-guide-renderer,
+html.learntube-extra-strict ytd-mini-guide-renderer,
+html.learntube-extra-strict ytd-app tp-yt-app-drawer,
+html.learntube-extra-strict #guide-button,
+html.learntube-extra-strict ytd-playlist-panel-renderer {
+  display: none !important;
+}
+
+html.learntube-extra-strict ytd-masthead {
+  background: #000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Hide Shorts navigation links */
+html.learntube-active a[title="Shorts"],
+html.learntube-active a[href="/shorts"],
+html.learntube-active ytd-guide-entry-renderer a[href*="/shorts"],
+html.learntube-active ytd-mini-guide-entry-renderer a[href*="/shorts"] {
+  display: none !important;
+}
+
+/* Expand video player when sidebar is removed */
+html.learntube-active ytd-watch-flexy {
+  --ytd-watch-flexy-masthead-height: 0px !important;
+  --ytd-watch-flexy-space-below-player: 0px !important;
+}
+
+html.learntube-active ytd-watch-flexy[flexy],
+html.learntube-active ytd-watch-flexy[theater] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html.learntube-active ytd-watch-flexy #columns,
+html.learntube-active ytd-watch-flexy #primary,
+html.learntube-active ytd-watch-flexy #primary-inner {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html.learntube-active #primary {
+  max-width: 100% !important;
+}
+
+html.learntube-active #primary-inner {
+  max-width: 100% !important;
+}
+
+html.learntube-active ytd-watch-flexy[flexy] #player-theater-container {
+  max-height: none !important;
+  height: 100vh !important;
+}
+
+html.learntube-active #player,
+html.learntube-active #player-container,
+html.learntube-active #player-container-outer,
+html.learntube-active #player-container-inner,
+html.learntube-active ytd-player,
+html.learntube-active #movie_player,
+html.learntube-active .html5-video-player {
+  background: #000 !important;
+}
+
+html.learntube-active #player,
+html.learntube-active #player-container,
+html.learntube-active #player-container-outer,
+html.learntube-active #player-container-inner,
+html.learntube-active ytd-player {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+html.learntube-active ytd-watch-flexy[flexy] #player-container-outer,
+html.learntube-active ytd-watch-flexy[flexy] #player-container-inner,
+html.learntube-active ytd-watch-flexy[flexy] #player {
+  height: 100vh !important;
+}
+
+html.learntube-active video.video-stream {
+  object-fit: contain !important;
+}
+
+/* LearnTube button injection */
+#learntube-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+#learntube-fab:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5);
+}
+
+#learntube-fab.active {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#learntube-fab .lt-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.9;
+}
+
+#learntube-fab .lt-pulse {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: lt-pulse 2s ease-in-out infinite;
+}
+
+#learntube-fab.active .lt-pulse {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes lt-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* Homepage replacement - show a focus prompt */
+html.learntube-active ytd-browse[page-subtype="home"]::after {
+  content: 'Focus Mode Active — Search for something to learn';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: -0.02em;
+}
+
+#learntube-strict-reminder {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  z-index: 2147483647;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
